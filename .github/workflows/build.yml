@@ -156,7 +156,8 @@ jobs:
             -e TMPFS_XATTR
 
           # 4. Brand localversion
-          python3 ../scripts/apply_configs.py --set-str LOCALVERSION "-Carbon-cupid"
+          python3 ../scripts/apply_configs.py --set-str LOCALVERSION "-gki"
+          echo -n "-g490755fcc6cc" > .scmversion
 
           make O=out ARCH=arm64 LLVM=1 LLVM_IAS=1 olddefconfig
 
